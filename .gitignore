@@ -1,0 +1,20 @@
+smartlife-agent/.venv/
+smartlife-agent/**/__pycache__/
+smartlife-agent/**/*.py[cod]
+
+# Local credentials and runtime configuration
+smartlife-agent/data/config.secrets.json
+smartlife-agent/.env
+smartlife-agent/.env.*
+
+# Runtime databases and vector indexes
+smartlife-agent/chroma_db/
+smartlife-agent/memory_db/
+smartlife-agent/data/conversations.db
+smartlife-agent/data/import_history.db
+
+# Local logs and caches
+smartlife-agent/.pytest_cache/
+smartlife-agent/.mypy_cache/
+smartlife-agent/.ruff_cache/
+smartlife-agent/*.log

@@ -1,0 +1,14 @@
+{
+  "main": {
+    "base_url": "https://api.deepseek.com/v1",
+    "model": "deepseek-v4-pro"
+  },
+  "small": {
+    "base_url": "",
+    "model": ""
+  },
+  "embedding": {
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "model": "text-embedding-v3"
+  }
+}
