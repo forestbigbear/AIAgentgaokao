@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>总览 · 高考志愿决策系统</title><link rel="stylesheet" href="css/style.css"><script defer src="js/common.js"></script><script defer src="js/overview.js"></script></head>
+<body data-page="overview"><main>
+  <div class="page-head"><div><h1>数据总览</h1><p>招生数据、考生档案与知识库状态</p></div><div class="page-actions"><button id="refresh" class="button secondary" type="button">刷新数据</button><a class="button" href="pages/student.html">新建考生</a></div></div>
+  <div class="notice"><p>当前样例院校与历史位次均为模拟数据。推荐仅供系统演示和决策辅助，请以官方最新信息为准。</p></div>
+  <section class="section"><div class="grid metrics" id="metrics"><div class="metric"><div class="metric-label">考生档案</div><div class="metric-value" data-count="students">—</div><div class="metric-note">已录入</div></div><div class="metric"><div class="metric-label">院校</div><div class="metric-value" data-count="universities">—</div><div class="metric-note">数据库记录</div></div><div class="metric"><div class="metric-label">专业</div><div class="metric-value" data-count="majors">—</div><div class="metric-note">数据库记录</div></div><div class="metric"><div class="metric-label">知识文档</div><div class="metric-value" data-count="knowledge-documents">—</div><div class="metric-note">已上传</div></div></div></section>
+  <section class="section two-col"><div><div class="section-head"><h2>当前考生</h2><a href="pages/student.html">管理档案</a></div><div class="panel" id="current-student"></div></div><div><div class="section-head"><h2>数据状态</h2><a href="pages/universities.html">查看院校数据</a></div><div class="panel" id="data-status"></div></div></section>
+  <section class="section"><div class="section-head"><h2>最近考生</h2><a href="pages/recommendation.html">进入智能推荐</a></div><div id="recent-students"></div></section>
+  <p class="footer-note">本系统仅提供志愿填报决策辅助，不保证录取结果。</p>
+</main></body></html>

@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>历史方案 · 高考志愿决策系统</title><link rel="stylesheet" href="../css/style.css"><script defer src="../js/common.js"></script><script defer src="../js/history.js"></script></head>
+<body data-page="history"><main>
+  <div class="page-head"><div><h1>历史志愿方案</h1><p>已保存的推荐与人工草稿</p></div><div class="page-actions"><a class="button" href="recommendation.html">生成新方案</a></div></div>
+  <section class="section"><div class="section-head"><h2>方案记录</h2><button id="refresh-plans" class="button secondary small" type="button">刷新</button></div><div id="plan-list"></div><div id="plan-pages" class="pagination"></div></section>
+  <section class="section"><div class="section-head"><h2>方案详情</h2><small id="detail-heading"></small></div><div id="plan-detail"></div></section>
+  <section class="section"><div class="section-head"><h2>方案比较</h2></div><form id="compare-form" class="panel toolbar"><div class="field" style="max-width:180px"><label for="compare-a">方案 A 编号</label><input id="compare-a" type="number" min="1" required></div><div class="field" style="max-width:180px"><label for="compare-b">方案 B 编号</label><input id="compare-b" type="number" min="1" required></div><button class="button" type="submit">比较方案</button></form><div id="compare-result" class="section"></div></section>
+  <p class="footer-note">历史方案保留生成时的数据依据，填报前仍需核对最新官方信息。系统不保证录取。</p>
+</main></body></html>

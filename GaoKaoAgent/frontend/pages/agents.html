@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Agent 工作流 · 高考志愿决策系统</title><link rel="stylesheet" href="../css/style.css"><script defer src="../js/common.js"></script><script defer src="../js/agents.js"></script></head>
+<body data-page="agents"><main>
+  <div class="page-head"><div><h1>Agent 工作流</h1><p>节点执行记录与处理结果</p></div><div class="page-actions"><a class="button secondary" href="recommendation.html">返回推荐</a></div></div>
+  <form id="run-form" class="panel toolbar"><div class="field" style="max-width:240px"><label for="run-id">运行编号</label><input id="run-id" name="run_id" type="number" min="1" required placeholder="输入运行编号"></div><button class="button" type="submit">查看运行</button><button id="refresh-run" class="button secondary" type="button">刷新</button></form>
+  <section class="section"><div class="section-head"><h2>执行进度</h2><small id="run-meta"></small></div><div class="progress" aria-label="完成进度"><span id="progress-fill"></span></div><div id="node-overview" class="grid metrics" style="margin-top:14px"></div></section>
+  <section class="section"><div class="section-head"><h2>执行事件</h2></div><div id="run-events"></div></section>
+  <p class="footer-note">节点状态与结果来自后端工作流事件。模拟数据不代表官方招生信息。</p>
+</main></body></html>

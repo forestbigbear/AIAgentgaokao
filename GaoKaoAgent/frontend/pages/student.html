@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>考生信息 · 高考志愿决策系统</title><link rel="stylesheet" href="../css/style.css"><script defer src="../js/common.js"></script><script defer src="../js/student.js"></script></head>
+<body data-page="student"><main>
+  <div class="page-head"><div><h1>考生信息</h1><p>录入或修改报考条件</p></div></div>
+  <div class="split"><section><div class="section-head"><h2 id="form-title">新增考生</h2></div><form id="student-form" class="panel" novalidate>
+    <div class="form-grid">
+      <div class="field"><label for="province">报考省份 *</label><input id="province" name="province" required maxlength="50" autocomplete="address-level1"><span class="field-error"></span></div>
+      <div class="field"><label for="exam_year">报考年份 *</label><input id="exam_year" name="exam_year" type="number" min="2020" max="2100" required><span class="field-error"></span></div>
+      <div class="field"><label for="score">高考成绩 *</label><input id="score" name="score" type="number" min="0" max="999.9" step="0.1" required><span class="field-error"></span></div>
+      <div class="field"><label for="rank_no">全省位次 *</label><input id="rank_no" name="rank_no" type="number" min="1" step="1" required><span class="field-error"></span></div>
+      <div class="field"><label for="subject_combination">选科组合 *</label><input id="subject_combination" name="subject_combination" required maxlength="100" placeholder="物理 化学 生物"><span class="field-error"></span></div>
+      <div class="field"><label for="risk_preference">风险偏好</label><select id="risk_preference" name="risk_preference"><option value="balanced">均衡</option><option value="conservative">保守</option><option value="aggressive">积极</option></select></div>
+      <div class="field"><label for="interests">专业兴趣</label><input id="interests" name="interests" placeholder="计算机，医学"><span class="hint">多个兴趣用逗号分隔</span><span class="field-error"></span></div>
+      <div class="field"><label for="target_cities">目标城市</label><input id="target_cities" name="target_cities" placeholder="上海，苏州"><span class="hint">多个城市用逗号分隔</span><span class="field-error"></span></div>
+    </div>
+    <div id="form-message" role="status"></div><div class="form-actions"><button id="submit-student" class="button" type="submit">保存考生</button><button id="reset-student" class="button secondary" type="button">清空</button></div>
+  </form></section><aside><div class="section-head"><h2>当前档案</h2></div><div id="selected-detail" class="panel"></div></aside></div>
+  <section class="section"><div class="section-head"><h2>考生档案</h2><button id="refresh-students" class="button secondary small" type="button">刷新</button></div><div id="student-list"></div><div id="student-pages" class="pagination"></div></section>
+  <p class="footer-note">请核对成绩、位次及选科。推荐仅供决策辅助，不保证录取。</p>
+</main></body></html>

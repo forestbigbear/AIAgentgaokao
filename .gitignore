@@ -18,3 +18,14 @@ smartlife-agent/.pytest_cache/
 smartlife-agent/.mypy_cache/
 smartlife-agent/.ruff_cache/
 smartlife-agent/*.log
+
+# GaoKaoAgent local environment and runtime files
+GaoKaoAgent/.venv/
+GaoKaoAgent/.env
+GaoKaoAgent/.env.tmp-*
+GaoKaoAgent/**/__pycache__/
+GaoKaoAgent/**/*.py[cod]
+GaoKaoAgent/.pytest_cache/
+GaoKaoAgent/.pytest-tmp-*/
+GaoKaoAgent/tests/pytest-*/
+GaoKaoAgent/storage/

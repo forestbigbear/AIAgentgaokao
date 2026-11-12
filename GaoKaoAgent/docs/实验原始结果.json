@@ -1,0 +1,1961 @@
+{
+  "generated_at": "2026-11-10T05:31:56.392302+00:00",
+  "environment": {
+    "python": "3.12.10",
+    "mysql": "9.7.4",
+    "embedding_configured": false,
+    "llm_configured": false
+  },
+  "dataset": {
+    "kind": "simulated",
+    "candidate_count": 9,
+    "snapshot_sha256": "ed5eb38af8805a952ba45bbcf9217dec6113b8be42d9b39d5f9bb3122d188cce",
+    "source": "sql/seed_simulated_data.sql"
+  },
+  "method": {
+    "history_years": 2,
+    "max_adjustments": 0,
+    "tier_quotas": {
+      "conservative": {
+        "冲": 1,
+        "稳": 2,
+        "保": 3
+      },
+      "balanced": {
+        "冲": 2,
+        "稳": 2,
+        "保": 2
+      },
+      "aggressive": {
+        "冲": 3,
+        "稳": 2,
+        "保": 1
+      }
+    },
+    "risk_codes": [
+      "subject_exclusion",
+      "simulated_source",
+      "single_history_year",
+      "stale_history",
+      "missing_tier",
+      "knowledge_unavailable"
+    ],
+    "timing": "multi-agent FastAPI TestClient POST including MySQL writes and RAG; traditional rule in-process including MySQL retrieval, no writes"
+  },
+  "repeats_per_case": 5,
+  "cases": [
+    {
+      "case": "balanced_computer_shanghai",
+      "input": {
+        "province": "上海",
+        "exam_year": 2026,
+        "score": 510,
+        "rank_no": 10000,
+        "subject_combination": "物理 化学",
+        "interests": [
+          "计算机"
+        ],
+        "target_cities": [
+          "上海"
+        ],
+        "risk_preference": "balanced"
+      },
+      "trials": [
+        {
+          "repeat": 1,
+          "traditional_rule": {
+            "duration_ms": 1.432,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 6,
+            "hard_conditions_satisfied": 6,
+            "preference_hits": 2,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 3,
+            "risk_false_positives": 0
+          },
+          "multi_agent": {
+            "duration_ms": 36.157,
+            "status": "completed",
+            "agent_event_count": 6,
+            "rag_passages": 0,
+            "items": [
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 6,
+            "hard_conditions_satisfied": 6,
+            "preference_hits": 2,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 4,
+            "risk_false_positives": 0
+          }
+        },
+        {
+          "repeat": 2,
+          "traditional_rule": {
+            "duration_ms": 1.048,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 6,
+            "hard_conditions_satisfied": 6,
+            "preference_hits": 2,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 3,
+            "risk_false_positives": 0
+          },
+          "multi_agent": {
+            "duration_ms": 41.705,
+            "status": "completed",
+            "agent_event_count": 6,
+            "rag_passages": 0,
+            "items": [
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 6,
+            "hard_conditions_satisfied": 6,
+            "preference_hits": 2,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 4,
+            "risk_false_positives": 0
+          }
+        },
+        {
+          "repeat": 3,
+          "traditional_rule": {
+            "duration_ms": 0.876,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 6,
+            "hard_conditions_satisfied": 6,
+            "preference_hits": 2,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 3,
+            "risk_false_positives": 0
+          },
+          "multi_agent": {
+            "duration_ms": 28.483,
+            "status": "completed",
+            "agent_event_count": 6,
+            "rag_passages": 0,
+            "items": [
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 6,
+            "hard_conditions_satisfied": 6,
+            "preference_hits": 2,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 4,
+            "risk_false_positives": 0
+          }
+        },
+        {
+          "repeat": 4,
+          "traditional_rule": {
+            "duration_ms": 0.993,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 6,
+            "hard_conditions_satisfied": 6,
+            "preference_hits": 2,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 3,
+            "risk_false_positives": 0
+          },
+          "multi_agent": {
+            "duration_ms": 26.971,
+            "status": "completed",
+            "agent_event_count": 6,
+            "rag_passages": 0,
+            "items": [
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 6,
+            "hard_conditions_satisfied": 6,
+            "preference_hits": 2,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 4,
+            "risk_false_positives": 0
+          }
+        },
+        {
+          "repeat": 5,
+          "traditional_rule": {
+            "duration_ms": 0.744,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 6,
+            "hard_conditions_satisfied": 6,
+            "preference_hits": 2,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 3,
+            "risk_false_positives": 0
+          },
+          "multi_agent": {
+            "duration_ms": 26.88,
+            "status": "completed",
+            "agent_event_count": 6,
+            "rag_passages": 0,
+            "items": [
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 6,
+            "hard_conditions_satisfied": 6,
+            "preference_hits": 2,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 4,
+            "risk_false_positives": 0
+          }
+        }
+      ]
+    },
+    {
+      "case": "conservative_computer_shanghai",
+      "input": {
+        "province": "上海",
+        "exam_year": 2026,
+        "score": 510,
+        "rank_no": 10000,
+        "subject_combination": "物理 化学",
+        "interests": [
+          "计算机"
+        ],
+        "target_cities": [
+          "上海"
+        ],
+        "risk_preference": "conservative"
+      },
+      "trials": [
+        {
+          "repeat": 1,
+          "traditional_rule": {
+            "duration_ms": 1.044,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 1,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 3,
+            "risk_false_positives": 0
+          },
+          "multi_agent": {
+            "duration_ms": 25.902,
+            "status": "completed",
+            "agent_event_count": 6,
+            "rag_passages": 0,
+            "items": [
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 2,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 4,
+            "risk_false_positives": 0
+          }
+        },
+        {
+          "repeat": 2,
+          "traditional_rule": {
+            "duration_ms": 1.149,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 1,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 3,
+            "risk_false_positives": 0
+          },
+          "multi_agent": {
+            "duration_ms": 26.44,
+            "status": "completed",
+            "agent_event_count": 6,
+            "rag_passages": 0,
+            "items": [
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 2,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 4,
+            "risk_false_positives": 0
+          }
+        },
+        {
+          "repeat": 3,
+          "traditional_rule": {
+            "duration_ms": 0.838,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 1,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 3,
+            "risk_false_positives": 0
+          },
+          "multi_agent": {
+            "duration_ms": 26.787,
+            "status": "completed",
+            "agent_event_count": 6,
+            "rag_passages": 0,
+            "items": [
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 2,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 4,
+            "risk_false_positives": 0
+          }
+        },
+        {
+          "repeat": 4,
+          "traditional_rule": {
+            "duration_ms": 0.996,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 1,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 3,
+            "risk_false_positives": 0
+          },
+          "multi_agent": {
+            "duration_ms": 26.704,
+            "status": "completed",
+            "agent_event_count": 6,
+            "rag_passages": 0,
+            "items": [
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 2,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 4,
+            "risk_false_positives": 0
+          }
+        },
+        {
+          "repeat": 5,
+          "traditional_rule": {
+            "duration_ms": 0.8,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 1,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 3,
+            "risk_false_positives": 0
+          },
+          "multi_agent": {
+            "duration_ms": 27.864,
+            "status": "completed",
+            "agent_event_count": 6,
+            "rag_passages": 0,
+            "items": [
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              },
+              {
+                "university_id": 5,
+                "major_id": 5,
+                "university_name": "模拟院校E",
+                "major_name": "模拟数据科学",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 2,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 4,
+            "risk_false_positives": 0
+          }
+        }
+      ]
+    },
+    {
+      "case": "aggressive_software_suzhou",
+      "input": {
+        "province": "上海",
+        "exam_year": 2026,
+        "score": 510,
+        "rank_no": 10000,
+        "subject_combination": "物理 化学",
+        "interests": [
+          "软件"
+        ],
+        "target_cities": [
+          "苏州"
+        ],
+        "risk_preference": "aggressive"
+      },
+      "trials": [
+        {
+          "repeat": 1,
+          "traditional_rule": {
+            "duration_ms": 0.978,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 1,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 3,
+            "risk_false_positives": 0
+          },
+          "multi_agent": {
+            "duration_ms": 27.252,
+            "status": "completed",
+            "agent_event_count": 6,
+            "rag_passages": 0,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 1,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 4,
+            "risk_false_positives": 0
+          }
+        },
+        {
+          "repeat": 2,
+          "traditional_rule": {
+            "duration_ms": 1.132,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 1,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 3,
+            "risk_false_positives": 0
+          },
+          "multi_agent": {
+            "duration_ms": 25.183,
+            "status": "completed",
+            "agent_event_count": 6,
+            "rag_passages": 0,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 1,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 4,
+            "risk_false_positives": 0
+          }
+        },
+        {
+          "repeat": 3,
+          "traditional_rule": {
+            "duration_ms": 0.742,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 1,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 3,
+            "risk_false_positives": 0
+          },
+          "multi_agent": {
+            "duration_ms": 27.485,
+            "status": "completed",
+            "agent_event_count": 6,
+            "rag_passages": 0,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 1,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 4,
+            "risk_false_positives": 0
+          }
+        },
+        {
+          "repeat": 4,
+          "traditional_rule": {
+            "duration_ms": 1.158,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 1,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 3,
+            "risk_false_positives": 0
+          },
+          "multi_agent": {
+            "duration_ms": 27.125,
+            "status": "completed",
+            "agent_event_count": 6,
+            "rag_passages": 0,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 1,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 4,
+            "risk_false_positives": 0
+          }
+        },
+        {
+          "repeat": 5,
+          "traditional_rule": {
+            "duration_ms": 0.895,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 1,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 3,
+            "risk_false_positives": 0
+          },
+          "multi_agent": {
+            "duration_ms": 26.394,
+            "status": "completed",
+            "agent_event_count": 6,
+            "rag_passages": 0,
+            "items": [
+              {
+                "university_id": 3,
+                "major_id": 3,
+                "university_name": "模拟院校C",
+                "major_name": "模拟软件工程",
+                "tier": "冲"
+              },
+              {
+                "university_id": 2,
+                "major_id": 2,
+                "university_name": "模拟院校B",
+                "major_name": "模拟计算机科学与技术",
+                "tier": "冲"
+              },
+              {
+                "university_id": 4,
+                "major_id": 4,
+                "university_name": "模拟院校D",
+                "major_name": "模拟计算机应用",
+                "tier": "稳"
+              },
+              {
+                "university_id": 1,
+                "major_id": 1,
+                "university_name": "模拟院校A",
+                "major_name": "模拟专业A",
+                "tier": "稳"
+              },
+              {
+                "university_id": 6,
+                "major_id": 6,
+                "university_name": "模拟院校F",
+                "major_name": "模拟信息工程",
+                "tier": "保"
+              }
+            ],
+            "recommended_count": 5,
+            "hard_conditions_satisfied": 5,
+            "preference_hits": 1,
+            "reference_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "detected_risks": [
+              "knowledge_unavailable",
+              "simulated_source",
+              "single_history_year",
+              "subject_exclusion"
+            ],
+            "risk_true_positives": 4,
+            "risk_false_positives": 0
+          }
+        }
+      ]
+    }
+  ],
+  "cleanup": "Temporary students, workflow runs, profiles, and plans deleted after sampling"
+}

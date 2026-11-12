@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>院校专业 · 高考志愿决策系统</title><link rel="stylesheet" href="../css/style.css"><script defer src="../js/common.js"></script><script defer src="../js/universities.js"></script></head>
+<body data-page="universities"><main>
+  <div class="page-head"><div><h1>院校专业查询</h1><p>院校、专业、招生计划与历史录取记录</p></div></div>
+  <div class="tabs" id="catalog-tabs" role="tablist" aria-label="数据类型"><button class="tab active" type="button" data-resource="universities">院校</button><button class="tab" type="button" data-resource="majors">专业</button><button class="tab" type="button" data-resource="admission-plans">招生计划</button><button class="tab" type="button" data-resource="admission-records">历年录取</button></div>
+  <form id="catalog-filter" class="panel toolbar">
+    <div class="field"><label for="filter-province">省份</label><input id="filter-province" name="province" placeholder="上海"></div>
+    <div class="field"><label for="filter-year">年份</label><input id="filter-year" name="year" type="number" min="2020" max="2100" placeholder="2026"></div>
+    <div class="field" data-filter="university"><label for="filter-university">院校名称</label><input id="filter-university" name="university_name"></div>
+    <div class="field" data-filter="major"><label for="filter-major">专业名称</label><input id="filter-major" name="major_name"></div>
+    <div class="field" data-filter="city"><label for="filter-city">城市</label><input id="filter-city" name="city"></div>
+    <div class="field" data-filter="subject"><label for="filter-subject">选科要求</label><input id="filter-subject" name="subject"></div>
+    <button class="button" type="submit">查询</button><button id="clear-filter" class="button secondary" type="button">清空</button>
+  </form>
+  <section class="section"><div class="section-head"><h2 id="catalog-heading">院校</h2><small id="catalog-total"></small></div><div id="catalog-result"></div><div id="catalog-pages" class="pagination"></div></section>
+  <p class="footer-note">请核对来源与适用年份。模拟数据仅供系统演示，不代表官方招生信息。</p>
+</main></body></html>

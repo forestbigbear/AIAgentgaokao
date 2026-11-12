@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>智能推荐 · 高考志愿决策系统</title><link rel="stylesheet" href="../css/style.css"><script defer src="../js/common.js"></script><script defer src="../js/recommendation.js"></script></head>
+<body data-page="recommendation"><main>
+  <div class="page-head"><div><h1>智能志愿推荐</h1><p>依据招生计划、历史位次和考生偏好生成分层方案</p></div><div class="page-actions"><a class="button secondary" href="agents.html">查看 Agent 执行</a><a class="button secondary" href="history.html">历史方案</a></div></div>
+  <div class="notice"><p>当前院校和录取位次为模拟数据，结果仅用于系统演示。匹配分数不是录取概率。</p></div>
+  <section class="section"><div class="section-head"><h2>考生与运行设置</h2></div><div class="panel"><div class="toolbar"><div id="student-summary" style="flex:2;min-width:230px"></div><div class="field" style="max-width:190px"><label for="max-adjustments">最多调整次数</label><select id="max-adjustments"><option value="2">2 次</option><option value="1">1 次</option><option value="0">不调整</option></select></div><button id="start-run" class="button" type="button">生成志愿方案</button></div></div></section>
+  <section class="section"><div class="section-head"><h2>推荐方案</h2><div id="result-actions" class="page-actions"></div></div><div id="run-status"></div><div id="recommendation-result"></div></section>
+  <section class="section two-col"><div><div class="section-head"><h2>风险复核</h2></div><div id="risk-result"></div></div><div><div class="section-head"><h2>数据缺口</h2></div><div id="gap-result"></div></div></section>
+  <p class="footer-note">正式填报前，请核对当地考试机构与院校官网的最新政策、计划和录取信息。本系统不保证录取。</p>
+</main></body></html>
